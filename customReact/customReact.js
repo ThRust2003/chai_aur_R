@@ -26,3 +26,4 @@ const customElement={
 }
 customrender(root,customElement)
 //appendchild() Useful when you want to keep a reference to the node you just appended (e.g., to style it or modify it right after).
+//variable injection is at last
