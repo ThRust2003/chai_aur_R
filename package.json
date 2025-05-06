@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "router-dom",
   "private": true,
   "version": "0.0.0",
@@ -26,5 +27,10 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "vite": "^6.3.1"
+=======
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+>>>>>>> 26737501ef1d65c2251dae5e20f364038edd5578
   }
 }
