@@ -1,0 +1,51 @@
+if a parent rerenders than its child also rerender unless memo is used
+memo function only renders when input changes.
+useCallback is required to memoize function
+
+
+useEffect
+Purpose: Run side effects (e.g., fetching data, setting up subscriptions, manipulating the DOM).
+Fetching data on component mount
+Adding/removing event listeners
+Animations, timers
+
+
+useEffect(() => {
+  // Side effect code
+  return () => {
+    // Cleanup (optional)
+  };
+}, [dependencies]);
+
+
+useMemo
+Purpose: Memorize a computed value so it doesn’t re-calculate on every render.
+When to Use: When a calculation is expensive and depends on specific variables.
+
+Common Use Cases:
+Expensive computations (e.g., filtering/sorting large lists)
+Preventing recalculations unless dependencies change
+
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+
+useCallback
+Purpose: Memorize a function reference so it doesn’t get recreated on every render.
+When to Use: When passing callbacks to child components to avoid unnecessary re-renders.
+const memoizedCallback = useCallback(() => {
+  doSomething(a, b);
+}, [a, b]);
+
+
+Passing callback functions to children that are memoized with React.memo
+
+Preventing unnecessary effect re-triggers due to new function references
+
+
+
+
+summary:
+Hook	     Memorizes	   Use Case
+useEffect	 Side effects	Run code after render
+useMemo	      Value	        Cache expensive computed results
+useCallback	  Function	    Avoid recreating functions
